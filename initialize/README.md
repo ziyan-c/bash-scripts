@@ -38,6 +38,6 @@ ssh_public_key_server=""
 hostname=my-server
 nic_name=eth0
 swapfile_size=2048
-ssh_public_key_personal="ssh-rsa AAAAB3... user@local"
-ssh_public_key_server="ssh-rsa AAAAB3... root@server"
+ssh_public_key_personal=""
+ssh_public_key_server=""
 ```
