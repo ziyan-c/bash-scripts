@@ -55,6 +55,7 @@ update_upgrade() {
 # Install necessary software
 install_softwares() {
     apt install coreutils nmap net-tools screen openssl traceroute curl vim -y
+    apt install -y wireguard-tools 
 }
 
 # 5
