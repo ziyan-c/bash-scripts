@@ -13,8 +13,10 @@ load_info_file() {
     # Extract variables using grep
     hostname=$(grep '^hostname=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n ')
     nic_name=$(grep '^nic_name=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n ')
-    ssh_public_key_personal=$(grep '^ssh_public_key_personal=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n ')
-    ssh_public_key_server=$(grep '^ssh_public_key_server=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n ')
+    # spaces are allowed in ssh keys 
+    ssh_public_key_personal=$(grep '^ssh_public_key_personal=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n')
+    ssh_public_key_server=$(grep '^ssh_public_key_server=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n')
+    
     swapfile_size=$(grep '^swapfile_size=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n ')
 }
 
