@@ -16,7 +16,7 @@ load_info_file() {
     # spaces are allowed in ssh keys 
     ssh_public_key_personal=$(grep '^ssh_public_key_personal=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n')
     ssh_public_key_server=$(grep '^ssh_public_key_server=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n')
-    
+
     swapfile_size=$(grep '^swapfile_size=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n ')
 }
 
@@ -36,7 +36,7 @@ update_upgrade() {
 # 4. Install necessary software
 install_softwares() {
     apt install coreutils nmap net-tools screen openssl traceroute curl vim -y
-    apt install -y wireguard-tools 
+    apt install -y wireguard-tools mariadb-client 
 }
 
 # 5. Disable and mask AppArmor
