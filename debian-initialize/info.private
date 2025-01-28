@@ -1,5 +1,5 @@
 hostname=my-server
 nic_name=eth0
 swapfile_size=2048
-ssh_public_key_personal=""
-ssh_public_key_server=""
+ssh_public_key_personal=
+ssh_public_key_server=

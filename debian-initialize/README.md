@@ -27,10 +27,10 @@ nic_name=<your-network-interface-name>
 swapfile_size=<size-in-mb>
 
 # Your personal SSH public key (e.g., key for your personal access)
-ssh_public_key_personal=""
+ssh_public_key_personal=
 
 # A server-specific SSH public key (e.g., for server-to-server authentication)
-ssh_public_key_server=""
+ssh_public_key_server=
 ```
 
 ## Example `info.private` file 
@@ -38,6 +38,6 @@ ssh_public_key_server=""
 hostname=my-server
 nic_name=eth0
 swapfile_size=2048
-ssh_public_key_personal=""
-ssh_public_key_server=""
+ssh_public_key_personal=
+ssh_public_key_server=
 ```
