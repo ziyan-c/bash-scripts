@@ -11,11 +11,11 @@ load_info_file() {
     fi
 
     # Extract variables using grep
-    hostname=$(grep '^hostname=' "$info_file" | cut -d'=' -f2-)
-    nic_name=$(grep '^nic_name=' "$info_file" | cut -d'=' -f2-)
-    ssh_public_key_personal=$(grep '^ssh_public_key_personal=' "$info_file" | cut -d'=' -f2-)
-    ssh_public_key_server=$(grep '^ssh_public_key_server=' "$info_file" | cut -d'=' -f2-)
-    swapfile_size=$(grep '^swapfile_size=' "$info_file" | cut -d'=' -f2-)
+    hostname=$(grep '^hostname=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n ')
+    nic_name=$(grep '^nic_name=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n ')
+    ssh_public_key_personal=$(grep '^ssh_public_key_personal=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n ')
+    ssh_public_key_server=$(grep '^ssh_public_key_server=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n ')
+    swapfile_size=$(grep '^swapfile_size=' "$info_file" | cut -d'=' -f2- | tr -d '\r\n ')
 }
 
 # 2. Check if the script is run by root
